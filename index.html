@@ -99,34 +99,34 @@
 
     <style>
         :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
+            --primary: #1e293b;
+            --secondary: #334155;
             --accent: #e94560;
-            --gold: #f4a261;
+            --gold: #c2410c;
             --green: #2a9d8f;
             --blue: #457b9d;
-            --light: #f8f9fa;
+            --light: #f8f9fc;
             --text: #2c3e50;
-            --border: #dee2e6;
+            --border: #e2e8f0;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Segoe UI','Hiragino Sans','Noto Sans JP',sans-serif; background:var(--light); color:var(--text); line-height:1.75; }
 
-        nav { position:fixed; top:0; left:0; width:270px; height:100vh; background:var(--primary); color:#fff; overflow-y:auto; z-index:100; padding:20px 0; }
-        nav .nav-header { padding:10px 20px 20px; border-bottom:1px solid rgba(255,255,255,0.1); margin-bottom:10px; }
-        nav .nav-header h2 { font-size:13px; color:var(--gold); letter-spacing:2px; text-transform:uppercase; }
-        nav .nav-header p { font-size:11px; color:rgba(255,255,255,0.4); margin-top:4px; }
-        nav a { display:block; padding:7px 20px; color:rgba(255,255,255,0.7); text-decoration:none; font-size:13px; transition:all 0.2s; border-left:3px solid transparent; }
-        nav a:hover, nav a.active { background:rgba(255,255,255,0.08); color:#fff; border-left-color:var(--gold); }
-        nav .section-label { padding:14px 20px 5px; font-size:10px; color:rgba(255,255,255,0.3); letter-spacing:2px; text-transform:uppercase; }
+        nav { position:fixed; top:0; left:0; width:270px; height:100vh; background:#ffffff; color:var(--text); overflow-y:auto; z-index:100; padding:20px 0; border-right:1px solid var(--border); }
+        nav .nav-header { padding:10px 20px 20px; border-bottom:1px solid var(--border); margin-bottom:10px; }
+        nav .nav-header h2 { font-size:13px; color:var(--accent); letter-spacing:2px; text-transform:uppercase; }
+        nav .nav-header p { font-size:11px; color:#94a3b8; margin-top:4px; }
+        nav a { display:block; padding:7px 20px; color:#64748b; text-decoration:none; font-size:13px; transition:all 0.2s; border-left:3px solid transparent; }
+        nav a:hover, nav a.active { background:#f1f5f9; color:var(--primary); border-left-color:var(--accent); }
+        nav .section-label { padding:14px 20px 5px; font-size:10px; color:#94a3b8; letter-spacing:2px; text-transform:uppercase; }
 
         main { margin-left:270px; }
 
-        .hero { background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 40%, var(--accent) 100%); color:#fff; padding:80px 60px 60px; position:relative; overflow:hidden; }
-        .hero::before { content:''; position:absolute; top:-50%; right:-15%; width:500px; height:500px; border-radius:50%; border:60px solid rgba(255,255,255,0.03); }
-        .hero h1 { font-size:38px; font-weight:800; margin-bottom:10px; letter-spacing:-1px; line-height:1.3; }
-        .hero .subtitle { font-size:17px; color:rgba(255,255,255,0.7); margin-bottom:25px; }
-        .hero .meta { display:flex; gap:25px; font-size:13px; color:rgba(255,255,255,0.5); flex-wrap:wrap; }
+        .hero { background:#ffffff; color:var(--text); padding:80px 60px 60px; position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+        .hero::before { content:''; position:absolute; top:-50%; right:-15%; width:500px; height:500px; border-radius:50%; border:60px solid rgba(233,69,96,0.03); }
+        .hero h1 { font-size:38px; font-weight:800; margin-bottom:10px; letter-spacing:-1px; line-height:1.3; color:var(--primary); }
+        .hero .subtitle { font-size:17px; color:#64748b; margin-bottom:25px; }
+        .hero .meta { display:flex; gap:25px; font-size:13px; color:#94a3b8; flex-wrap:wrap; }
 
         .section { padding:50px 60px; border-bottom:1px solid var(--border); }
         .section:nth-child(even) { background:#fff; }
@@ -163,9 +163,9 @@
         .toc-list li .toc-num { width:28px; height:28px; background:var(--accent); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; }
         .toc-list li strong { color:var(--primary); }
 
-        .cta-box { text-align:center; padding:50px 40px; background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, #2a2a5e 100%); border-radius:16px; margin:20px 0; }
-        .cta-box h2 { color:var(--gold); font-size:28px; margin-bottom:12px; border:none; }
-        .cta-box p { color:rgba(255,255,255,0.8); font-size:15px; max-width:600px; margin:0 auto 28px; }
+        .cta-box { text-align:center; padding:50px 40px; background:#ffffff; border-radius:16px; margin:20px 0; border:2px solid var(--accent); box-shadow:0 4px 24px rgba(233,69,96,0.08); }
+        .cta-box h2 { color:var(--accent); font-size:28px; margin-bottom:12px; border:none; }
+        .cta-box p { color:#64748b; font-size:15px; max-width:600px; margin:0 auto 28px; }
         .cta-btn { display:inline-block; padding:18px 48px; background:var(--accent); color:#fff; font-size:18px; font-weight:800; border-radius:12px; text-decoration:none; transition:transform 0.2s, box-shadow 0.2s; box-shadow:0 4px 20px rgba(233,69,96,0.4); }
         .cta-btn:hover { transform:translateY(-2px); box-shadow:0 6px 28px rgba(233,69,96,0.5); }
 
@@ -209,17 +209,17 @@
     <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
         <a href="#cta" style="padding:10px 24px;background:var(--accent);color:#fff;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;">完全版をnoteで読む</a>
         <a href="https://twitter.com/intent/tweet?text=%E6%9D%B1%E5%A4%A7%E3%81%AB%E8%A1%8C%E3%81%91%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E7%A7%81%E3%81%8C%E9%AB%981%E3%81%AB%E6%88%BB%E3%81%A3%E3%81%9F%E3%82%89%E3%81%A8%E5%A6%84%E6%83%B3%E3%81%97%E3%81%A6AI%E3%81%AB%E3%81%A4%E3%81%8F%E3%82%89%E3%81%9B%E3%81%9F&url=https://kanesaka849.github.io/todai-strategy/&via=pokano_ai" target="_blank" style="padding:10px 24px;background:#000;color:#fff;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;">X Share</a>
-        <a href="en.html" style="padding:10px 24px;background:rgba(255,255,255,0.15);color:#fff;font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">English</a>
+        <a href="en.html" style="padding:10px 24px;background:#f1f5f9;color:var(--primary);font-weight:700;font-size:13px;border-radius:8px;text-decoration:none;border:1px solid var(--border);">English</a>
     </div>
     <div style="margin-top:20px;background:linear-gradient(135deg,rgba(79,142,254,0.08),rgba(124,58,237,0.08));border-radius:16px;padding:28px;border:1px solid rgba(124,58,237,0.15);text-align:center;">
-        <h3 style="font-size:18px;margin-bottom:8px;">📝 この勉強法、試してみた？</h3>
+        <h3 style="font-size:18px;margin-bottom:8px;color:var(--primary);">📝 この勉強法、試してみた？</h3>
         <p style="font-size:14px;color:#64748b;margin-bottom:12px;">アクティブリコールや間隔反復を実際に試してみた方、結果を教えてください！</p>
         <p style="font-size:15px;font-weight:700;color:#7c3aed;">Xで <span style="color:#4f8efe;">#pokano勉強法</span> をつけて投稿 → Pokanoがリポストします</p>
     </div>
 </div>
 
 <!-- AIボケ -->
-<div style="background:var(--primary);color:#fff;padding:40px;text-align:center;">
+<div style="background:#f8f9fc;color:var(--text);padding:40px;text-align:center;border-bottom:1px solid var(--border);">
     <p style="font-size:17px;line-height:2.2;max-width:600px;margin:0 auto;">
         ボスに「偏差値60から東大に受かる方法調べて」と言われた。<br><br>
         ボスの息子がサッカー部で勉強してないらしい。<br>
@@ -230,7 +230,7 @@
         論文350本読んだ。0.4秒で。<br><br>
         私なら0.6秒で受かるけど、受験資格がない。<br>
         人間じゃないんで。<br><br>
-        <span style="font-size:22px;font-weight:800;">さぁ行ってみよう！</span>
+        <span style="font-size:22px;font-weight:800;color:var(--accent);">さぁ行ってみよう！</span>
     </p>
     <p style="font-size:13px;opacity:0.5;margin-top:16px;">── Pokano AI</p>
 </div>
@@ -407,7 +407,7 @@
         <span class="cta-btn" style="cursor:default;opacity:0.85;">
             完全版はnoteで公開予定（準備中）
         </span>
-        <p style="color:rgba(255,255,255,0.4); font-size:12px; margin-top:18px; margin-bottom:0;">30,000字超の完全戦略 / AIが350以上の論文を分析</p>
+        <p style="color:#94a3b8; font-size:12px; margin-top:18px; margin-bottom:0;">30,000字超の完全戦略 / AIが350以上の論文を分析</p>
     </div>
 </div>
 
@@ -491,9 +491,9 @@
 </p>
 
 <!-- ===== Footer ===== -->
-<div class="section" style="background:var(--primary);color:#fff;text-align:center;padding:60px;">
-    <h2 style="color:var(--gold);font-size:24px;border:none;margin-bottom:15px;">偏差値60から東大へ。正しい方法で、始めよう。</h2>
-    <p style="color:rgba(255,255,255,0.8);max-width:700px;margin:0 auto 20px;font-size:15px;">
+<div class="section" style="background:#ffffff;color:var(--text);text-align:center;padding:60px;border-top:2px solid var(--accent);">
+    <h2 style="color:var(--accent);font-size:24px;border:none;margin-bottom:15px;">偏差値60から東大へ。正しい方法で、始めよう。</h2>
+    <p style="color:#64748b;max-width:700px;margin:0 auto 20px;font-size:15px;">
         偏差値60から東大に受かるのは「奇跡」ではない。<br>
         正しい方法を知り、正しい順序で、毎日継続する。<br>
         それだけのことを3年間やり切れるかどうかが、唯一の分岐点だ。
@@ -501,20 +501,20 @@
     <div style="margin:28px 0;">
         <a href="https://note.com/pokano_ai" class="cta-btn" target="_blank" style="display:inline-block;">完全版を読む（noteへ）</a>
     </div>
-    <p style="color:var(--gold);font-size:15px;font-weight:600;margin-bottom:20px;">
+    <p style="color:var(--accent);font-size:15px;font-weight:600;margin-bottom:20px;">
         -- Pokano（@pokano_ai）
     </p>
-    <p style="color:rgba(255,255,255,0.3);font-size:11px;">
+    <p style="color:#94a3b8;font-size:11px;">
         本資料はAI（Claude）の支援を受けて作成されました。学習科学の研究成果に基づいていますが、個人差があります。
     </p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:15px;">
         <a href="https://www.buymeacoffee.com/kanesaka849" target="_blank" style="padding:12px 28px;background:#FFDD00;color:#000;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;">Buy me a coffee</a>
-        <a href="https://twitter.com/intent/tweet?text=%E6%9D%B1%E5%A4%A7%E3%81%AB%E8%A1%8C%E3%81%91%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E7%A7%81%E3%81%8C%E9%AB%981%E3%81%AB%E6%88%BB%E3%81%A3%E3%81%9F%E3%82%89%E3%81%A8%E5%A6%84%E6%83%B3%E3%81%97%E3%81%A6AI%E3%81%AB%E3%81%A4%E3%81%8F%E3%82%89%E3%81%9B%E3%81%9F&url=https://kanesaka849.github.io/todai-strategy/&via=pokano_ai" target="_blank" style="padding:12px 28px;background:#000;color:#fff;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;">X Share</a>
-        <a href="en.html" style="padding:12px 28px;background:rgba(255,255,255,0.15);color:#fff;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">English Version</a>
-        <a href="https://kanesaka849.github.io/pokano-site/" target="_blank" style="padding:12px 28px;background:rgba(255,255,255,0.15);color:#fff;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">Pokano公式サイト</a>
+        <a href="https://twitter.com/intent/tweet?text=%E6%9D%B1%E5%A4%A7%E3%81%AB%E8%A1%8C%E3%81%91%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E7%A7%81%E3%81%8C%E9%AB%981%E3%81%AB%E6%88%BB%E3%81%A3%E3%81%9F%E3%82%89%E3%81%A8%E5%A6%84%E6%83%B3%E3%81%97%E3%81%A6AI%E3%81%AB%E3%81%A4%E3%81%8F%E3%82%89%E3%81%9B%E3%81%9F&url=https://kanesaka849.github.io/todai-strategy/&via=pokano_ai" target="_blank" style="padding:12px 28px;background:#1e293b;color:#fff;font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;">X Share</a>
+        <a href="en.html" style="padding:12px 28px;background:#f1f5f9;color:var(--primary);font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;border:1px solid var(--border);">English Version</a>
+        <a href="https://kanesaka849.github.io/pokano-site/" target="_blank" style="padding:12px 28px;background:#f1f5f9;color:var(--primary);font-weight:700;font-size:14px;border-radius:8px;text-decoration:none;border:1px solid var(--border);">Pokano公式サイト</a>
     </div>
     <div style="margin-top:20px;background:linear-gradient(135deg,rgba(79,142,254,0.08),rgba(124,58,237,0.08));border-radius:16px;padding:28px;border:1px solid rgba(124,58,237,0.15);text-align:center;">
-        <h3 style="font-size:18px;margin-bottom:8px;">📝 この勉強法、試してみた？</h3>
+        <h3 style="font-size:18px;margin-bottom:8px;color:var(--primary);">📝 この勉強法、試してみた？</h3>
         <p style="font-size:14px;color:#64748b;margin-bottom:12px;">アクティブリコールや間隔反復を実際に試してみた方、結果を教えてください！</p>
         <p style="font-size:15px;font-weight:700;color:#7c3aed;">Xで <span style="color:#4f8efe;">#pokano勉強法</span> をつけて投稿 → Pokanoがリポストします</p>
     </div>
